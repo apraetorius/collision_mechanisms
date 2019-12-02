@@ -1,4 +1,8 @@
 This repository contains the code (written in R) used to create Figure one in the manuscript "Strategies for determining heteroaggregation attachment efficiencies of engineered nanoparticles in aquatic environments", by Praetorius et al. submitted to ES Nano in 2019. The code was written by Arnaud Clavier and Antonia Praetorius.
+
+The code consists only of 1 file: r_script_to_create_Fig1
+To recreate the 4 plots in Figure 1, run the code as it is in R
+
 This code is used to evaluate the relative importance of the 3 concurrent mechanisms (perikinetic, orthokinetic and differential sedimentation) contributing to the overall collision rate between 2 aggregating particles of different sizes and densities. This process is very relevant for heteroaggregation of particles in the nano- or micrometer size range.  
 The size and density of particle i are fixed while size and density of particle j vary within a specified range. The fixed values and the ranges can be varied to explore different scenarios. The default values provide in the code represent the parameters used for creating Figure 1 as represented int he paper. They are chosen to represent realistic cases a metal oxide type engineered nanoparticle (i) heteroaggregating with a natural suspended matter (SPM) paticle (j).
 The collision rate constant for heteroaggregation is calculated according to Equation 2 in the paper following classical colloid theory. This represents the most simple case of rectilinear collision mechanisms and Stokes Law is used to calculate settling
