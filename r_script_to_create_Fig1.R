@@ -138,7 +138,7 @@ ay <- list(
 p1 <- plot_ly(
   x = kcoll_data[,2], y = kcoll_data[,1], z = log10(kcoll_data[,3]),
   type = "contour", autocontour = F) %>% 
-  colorbar(title = "log(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
+  colorbar(title = "log<sub>10</sub>(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
 ) %>%
   layout(
     title = "perikinetic aggregation",
@@ -152,7 +152,7 @@ p1
 p2 <- plot_ly(
   x = kcoll_data[,2], y = kcoll_data[,1], z = log10(kcoll_data[,4]),
   type = "contour")%>% 
-  colorbar(title = "log(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
+  colorbar(title = "log<sub>10</sub>(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
   ) %>%
   layout(
     title = "orthokinetic aggregation",
@@ -170,7 +170,7 @@ p3 <- plot_ly(
     end = -14,
     size = 1
   )) %>% 
-  colorbar(title = "log(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
+  colorbar(title = "log<sub>10</sub>(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
   ) %>% 
   layout(
     title = "differential sedimentation",
@@ -214,7 +214,7 @@ p4 <- plot_ly(
     end = -14,
     size = 1
   )) %>% 
-  colorbar(title = "log(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
+  colorbar(title = "log<sub>10</sub>(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
   ) %>% add_trace(x = x_curve[78:360,1], y= y_curve[78:360,1], type = "scatter", mode = "line", color = "orange") %>% 
   layout(
     title = "differential sedimentation",
@@ -229,7 +229,7 @@ p5 <- plot_ly(
   x = kcoll_data[,2], y = kcoll_data[,1], z = log10(kcoll_data[,6]),
   type = "contour", autocontour = F   
     ) %>% 
-  colorbar(title = "log(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
+  colorbar(title = "log<sub>10</sub>(rate \n constant \n in m<sup>3</sup>/s)", exponentformat = "E",   titlefont = f1, tickfont = f2
   ) %>%
   layout(
     title = "overall collision rate",
@@ -243,17 +243,18 @@ p5
 #to save plots, install orca: https://github.com/plotly/orca
 #and uncomment lines below
 
-#save as png
-#orca(p1, "peri.png")
-#orca(p2, "ortho.png")
-#orca(p3, "sedi_noZeros.png")
-#orca(p4, "sedi_wZeros.png")
-#orca(p5, "sum.png")
-
-
-#save as svg
-#orca(p1, "peri.svg")
-#orca(p2, "ortho.svg")
-#orca(p3, "sedi_noZeros.svg")
-#orca(p4, "sedi_wZeros.svg")
-#orca(p5, "sum.svg")
+# #save as png
+# orca(p1, "peri.png")
+# orca(p2, "ortho.png")
+# orca(p3, "sedi_noZeros.png")
+# orca(p4, "sedi_wZeros.png")
+# orca(p5, "sum.png")
+# 
+# 
+# #save as svg
+# orca(p1, "peri.svg")
+# orca(p2, "ortho.svg")
+# orca(p3, "sedi_noZeros.svg")
+# orca(p4, "sedi_wZeros.svg")
+# orca(p5, "sum.svg")
+# 
